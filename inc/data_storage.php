@@ -44,8 +44,14 @@ class DataStorage extends \LayoutBuilder\DataStorage
 			}
 		}
 
-		// store the layout data as a JSON meta field
-		update_post_meta($id, 'layout_json', json_encode($state));
+		$stateJson = json_encode($state);
+
+		// note that update_post_meta() expects slashed data, so we must explicitly use wp_slash()
+		// otherwise, something like this (valid JSON):
+		//   "foo": "<a href=\"#\">foo</a>"
+		// would turn into (invalid JSON):
+		//   "foo": "<a href="#">foo</a>"
+		update_post_meta($id, 'layout_json', wp_slash($stateJson));
 
 		return $id;
 	}
