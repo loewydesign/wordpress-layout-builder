@@ -19,6 +19,9 @@ if (defined('WP_INSTALLING') && WP_INSTALLING)
     return;
 }
 
-require_once 'inc/post_type.php';
-require_once 'inc/shortcode.php';
-require_once 'inc/admin.php';
+// make LayoutBuilder\Element class available to themes before WordPress init hook
+require_once __DIR__ . '/layout-builder/lib/Element.php';
+
+require_once __DIR__ . '/inc/post_type.php';
+require_once __DIR__ . '/inc/shortcode.php';
+require_once __DIR__ . '/inc/admin.php';
