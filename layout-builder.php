@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Layout Builder
-Description: Simplifies the placement of elements into sophisticated grids.
-Plugin URI: https://github.com/loewydesign/layout-builder
+Plugin Name: WordPress Layout Builder
+Description: Integration of Layout Builder into WordPress in the form of a plugin. Layout Builder simplifies the placement of elements into sophisticated grids.
+Plugin URI: https://github.com/loewydesign/wordpress-layout-builder
 Author: Loewy
 Author URI: http://loewy.com
 */

@@ -1,10 +1,10 @@
 # WordPress Layout Builder
 
-**WIP! Feel free to experiment, but don't expect it to be 100% until we make our first release!**
+**WIP! Feel free to experiment, but don't expect it to be at 100%! It is very likely that there are various bugs, glitches, and potentially even security holes.**
 
 ## Overview
 
-Integration of Layout Builder into WordPress in the form of a plugin.
+Integration of Layout Builder into WordPress in the form of a plugin. Layout Builder simplifies the placement of elements into sophisticated grids.
 
 ## Installation
 
@@ -62,6 +62,10 @@ Elements are created via the element provider class. In WordPress, this class is
 	}
 
 	add_action('layout_builder_elements', 'register');
+
+## Registering Stylesheets and Scripts
+
+WIP
 
 ## Integration Details
 
