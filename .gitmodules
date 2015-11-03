@@ -1,0 +1,4 @@
+[submodule "layout-builder"]
+	path = layout-builder
+	url = git@github.com:loewydesign/layout-builder.git
+	branch = develop
