@@ -42,7 +42,7 @@ function registerShortcode()
 			return '<p>Invalid layout with ID: ' . $id . '</p>';
 		}
 		
-		return $output->render($state, $attribs['lang']);
+		return $output->render($state, $attribs['lang'], true);
 	});
 }
 
