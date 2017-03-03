@@ -42,6 +42,11 @@ function registerShortcode()
 			return '<p>Invalid layout with ID: ' . $id . '</p>';
 		}
 		
+		if (defined('LB_CONTENT_FILTER_OUTPUT') && LB_CONTENT_FILTER_OUTPUT == true) 
+		{
+			return apply_filters('the_content', $output->render($state, $attribs['lang'], true));			
+		}
+
 		return $output->render($state, $attribs['lang'], true);
 	});
 }

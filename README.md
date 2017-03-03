@@ -73,6 +73,13 @@ WIP
 
 Uploads are handled as WordPress attachments. If an upload matches an existing file in `wp-content/uploads` both by filename and by MD5 hash, the existing file is used. Otherwise, WordPress's regular attachment renaming kicks in (e.g. foo.png, foo1.png, foo2.png, etc.).
 
+### Output Filtering
+
+Layout Builder output can apply the WordPress hook filter for 'the_content' by setting a constant in your `wp-config.php` file.
+
+	// will perform apply_filters('the_content', $output) to the output of Layout Builder
+	define('LB_CONTENT_FILTER_OUTPUT', true);
+
 ## License
 
 WordPress Layout Builder is licensed under the GPLv2. See LICENSE file for the full GPLv2 license text.
